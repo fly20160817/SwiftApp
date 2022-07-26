@@ -1,0 +1,46 @@
+PODS:
+  - Alamofire (5.6.1)
+  - IQKeyboardManager (6.5.10)
+  - KakaJSON (1.1.2)
+  - MJRefresh (3.7.5)
+  - SDWebImage (5.13.1):
+    - SDWebImage/Core (= 5.13.1)
+  - SDWebImage/Core (5.13.1)
+  - SnapKit (5.6.0)
+  - SVProgressHUD (2.2.5)
+  - SwiftyJSON (5.0.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.6.1)
+  - IQKeyboardManager (~> 6.5.10)
+  - KakaJSON (~> 1.1.2)
+  - MJRefresh (~> 3.7.5)
+  - SDWebImage (~> 5.13.1)
+  - SnapKit (~> 5.6.0)
+  - SVProgressHUD (~> 2.2.5)
+  - SwiftyJSON (~> 5.0.1)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - IQKeyboardManager
+    - KakaJSON
+    - MJRefresh
+    - SDWebImage
+    - SnapKit
+    - SVProgressHUD
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  IQKeyboardManager: 45a1fa55c1a5b02c61ac0fd7fd5b62bb4ad20d97
+  KakaJSON: cc5ff50a8c1cfbb09413db8496cb709a209e6137
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
+  SDWebImage: fb26a455eeda4c7a55e4dcb6172dbb258af7a4ca
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+
+PODFILE CHECKSUM: 7caa7e80dc2c2c9f14935ca9e28c9a900e2549a9
+
+COCOAPODS: 1.11.2
