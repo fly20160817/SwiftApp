@@ -38,6 +38,10 @@ extension TabBarController
 {
     func initUI()
     {
+        //设置tabBar不透明，内容就会自动从tabBar上面开始
+        tabBar.isTranslucent = false;
+        
+        
         if #available(iOS 13.0, *)
         {
             let barAppearance  = UITabBarAppearance()
