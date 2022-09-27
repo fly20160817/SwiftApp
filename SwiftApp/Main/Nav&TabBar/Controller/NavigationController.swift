@@ -73,23 +73,23 @@ private extension NavigationController
     {
         //设置系统的滑动手势代理为自己
         interactivePopGestureRecognizer?.delegate = self
-        
+
         //设置导航栏不透明，内容就会自动从导航栏下面开始
         navigationBar.isTranslucent = false;
-        
-        
-        if #available(iOS 15.0, *)
+
+
+        if #available(iOS 13.0, *)
         {
             let barAppearance = UINavigationBarAppearance()
             //bar的背景颜色
             barAppearance.backgroundColor = UIColor.white
             //底下线的颜色
             barAppearance.shadowColor = UIColor.clear
-            
+
             //设置导航条标题的字体、颜色
             let dic = [ NSAttributedString.Key.font : FONT_M(16), NSAttributedString.Key.foregroundColor : colorHex("#333333") ]
             barAppearance.titleTextAttributes = dic
-            
+
             navigationBar.scrollEdgeAppearance = barAppearance
             navigationBar.standardAppearance = barAppearance
         }
@@ -97,10 +97,10 @@ private extension NavigationController
         {
             //bar的背景颜色
             navigationBar.barTintColor = colorHex("FFFFFF")
-            
+
             //底下线的颜色
             navigationBar.shadowImage = UIImage.init(color: UIColor.clear, size: CGSize(width: SCREEN_WIDTH, height: 1))
-            
+
             //设置导航条标题的字体、颜色
             let dic = [ NSAttributedString.Key.font : FONT_M(16), NSAttributedString.Key.foregroundColor : colorHex("#333333") ]
             navigationBar.titleTextAttributes = dic

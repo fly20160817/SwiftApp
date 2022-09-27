@@ -21,9 +21,6 @@
 
 //导入Swift需要用到的 OC文件
 #import "FLYUser.h"
-#import "UICollectionView+FLYRefresh.h"
-#import "UITableView+FLYRefresh.h"
-#import "FLYDataStatusProtocal.h"
 
 //导入Swift常用的框架
 #import <SnapKit/SnapKit-Swift.h>
@@ -31,6 +28,7 @@
 #import <SwiftyJSON/SwiftyJSON-Swift.h>
 //不是Swift库，它的头文件就叫SVProgressHUD.h
 #import <SVProgressHUD/SVProgressHUD.h>
+#import <MJRefresh/MJRefresh.h>
 #import <FLYKit/FLYKit.h>
 
 //系统的库也可以在这里导入

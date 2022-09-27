@@ -13,7 +13,9 @@ class TabBarController: UITabBarController {
         let path = Bundle.main.path(forResource: "Tabbar", ofType: "plist")
         return NSArray.init(contentsOfFile: path!)!
     }()
-    private lazy var vcNames = [ "HomeViewController", "MessageViewController", "MyViewController" ]
+    
+    //private lazy var vcNames = [ "HomeViewController", "MessageViewController", "MyViewController" ]
+    private lazy var vcClassArray: Array<UIViewController.Type> = [ HomeViewController.self, MessageViewController.self, MyViewController.self ]
     
     
     
@@ -77,7 +79,7 @@ extension TabBarController
     {
         var vcArray = [UIViewController]()
         
-        for i in 0 ..< vcNames.count
+        for i in 0 ..< vcClassArray.count
         {
             /*
             Swift中新增了一个叫做命名空间的概念
@@ -102,11 +104,13 @@ extension TabBarController
              */
             
             
-            let name: String = Bundle.main.infoDictionary?["CFBundleExecutable"] as! String
-            let vcName = vcNames[i]
+//            let name: String = Bundle.main.infoDictionary?["CFBundleExecutable"] as! String
+//            let vcName = vcNames[i]
+//
+//            let typeClass = NSClassFromString(name + "." + vcName) as! UIViewController.Type
+//            let vc = typeClass.init()
             
-            let typeClass = NSClassFromString(name + "." + vcName) as! UIViewController.Type
-            let vc = typeClass.init()
+            let vc = vcClassArray[i].init()
             
             let dic: Dictionary = dataList[i] as! Dictionary<String, String>
             

@@ -12,9 +12,10 @@
 		044F53DA28801CDC00948767 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044F53D828801CDC00948767 /* LaunchScreen.storyboard */; };
 		044F54002881042800948767 /* KeyValueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F53FF2881042700948767 /* KeyValueModel.swift */; };
 		044F54022881579500948767 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F54012881579500948767 /* BaseModel.swift */; };
+		0494B7B728E1B394004AA82B /* FLYKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0494B7B628E1B394004AA82B /* FLYKit.framework */; };
+		0494B7B928E1B632004AA82B /* FLYKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0494B7B628E1B394004AA82B /* FLYKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		04A6BA6328892A39009D95A3 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6BA6228892A39009D95A3 /* Network.swift */; };
 		04A6BA65288E3238009D95A3 /* NetWorkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6BA64288E3238009D95A3 /* NetWorkTool.swift */; };
-		04A6BA6B288E6C65009D95A3 /* WaterFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6BA69288E6C64009D95A3 /* WaterFlowLayout.swift */; };
 		04A6BA6C288E6C65009D95A3 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6BA6A288E6C64009D95A3 /* Cell.swift */; };
 		04A6BA6E288E6C88009D95A3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6BA6D288E6C88009D95A3 /* Model.swift */; };
 		04F31E8A288652D2007BC8F0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F31E89288652D2007BC8F0 /* TabBarController.swift */; };
@@ -22,9 +23,6 @@
 		04F31E8E2886814E007BC8F0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F31E8D2886814E007BC8F0 /* HomeViewController.swift */; };
 		04F31E902886815D007BC8F0 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F31E8F2886815C007BC8F0 /* MessageViewController.swift */; };
 		04F31E9228868167007BC8F0 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F31E9128868167007BC8F0 /* MyViewController.swift */; };
-		04F949DF28868DB4002E2197 /* ExceptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F949DE28868DB3002E2197 /* ExceptionView.swift */; };
-		04F94A0C2886BA9F002E2197 /* UITableView+FLYRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F94A072886BA9F002E2197 /* UITableView+FLYRefresh.m */; };
-		04F94A0D2886BA9F002E2197 /* UICollectionView+FLYRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F94A0B2886BA9F002E2197 /* UICollectionView+FLYRefresh.m */; };
 		04F94A132887CACA002E2197 /* FLYUserAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F94A0F2887CACA002E2197 /* FLYUserAction.m */; };
 		04F94A142887CACA002E2197 /* FLYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F94A122887CACA002E2197 /* FLYUser.m */; };
 		04F94A162887D6EC002E2197 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F94A152887D6EC002E2197 /* APIConfig.swift */; };
@@ -32,13 +30,23 @@
 		04FABB882887EA6900A363F5 /* ConfigureSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FABB872887EA6900A363F5 /* ConfigureSDK.swift */; };
 		04FD67A22885438000634487 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD67A12885438000634487 /* BaseViewController.swift */; };
 		04FD67A4288544B700634487 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD67A3288544B700634487 /* NavigationController.swift */; };
-		04FD67A62885454D00634487 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD67A52885454D00634487 /* Common.swift */; };
-		04FD67AA288553FD00634487 /* FLYKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FD67A9288553FD00634487 /* FLYKit.framework */; };
 		F3970215AB7D02FB6F2EA63F /* Pods_SwiftApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3794CBC503273A22E783C58 /* Pods_SwiftApp.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0494B7B828E1B61D004AA82B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				0494B7B928E1B632004AA82B /* FLYKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		042B0708288E9B8600386D51 /* FLYDataStatusProtocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLYDataStatusProtocal.h; sourceTree = "<group>"; };
 		044F53CA28801CD800948767 /* SwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044F53CD28801CD800948767 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		044F53D628801CDC00948767 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,9 +54,9 @@
 		044F53DB28801CDC00948767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		044F53FF2881042700948767 /* KeyValueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueModel.swift; sourceTree = "<group>"; };
 		044F54012881579500948767 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		0494B7B628E1B394004AA82B /* FLYKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FLYKit.framework; sourceTree = "<group>"; };
 		04A6BA6228892A39009D95A3 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		04A6BA64288E3238009D95A3 /* NetWorkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkTool.swift; sourceTree = "<group>"; };
-		04A6BA69288E6C64009D95A3 /* WaterFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterFlowLayout.swift; sourceTree = "<group>"; };
 		04A6BA6A288E6C64009D95A3 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		04A6BA6D288E6C88009D95A3 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		04F31E89288652D2007BC8F0 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -56,11 +64,6 @@
 		04F31E8D2886814E007BC8F0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		04F31E8F2886815C007BC8F0 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		04F31E9128868167007BC8F0 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
-		04F949DE28868DB3002E2197 /* ExceptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExceptionView.swift; sourceTree = "<group>"; };
-		04F94A072886BA9F002E2197 /* UITableView+FLYRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FLYRefresh.m"; sourceTree = "<group>"; };
-		04F94A082886BA9F002E2197 /* UITableView+FLYRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FLYRefresh.h"; sourceTree = "<group>"; };
-		04F94A0A2886BA9F002E2197 /* UICollectionView+FLYRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+FLYRefresh.h"; sourceTree = "<group>"; };
-		04F94A0B2886BA9F002E2197 /* UICollectionView+FLYRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+FLYRefresh.m"; sourceTree = "<group>"; };
 		04F94A0F2887CACA002E2197 /* FLYUserAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLYUserAction.m; sourceTree = "<group>"; };
 		04F94A102887CACA002E2197 /* FLYUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLYUser.h; sourceTree = "<group>"; };
 		04F94A112887CACA002E2197 /* FLYUserAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLYUserAction.h; sourceTree = "<group>"; };
@@ -71,8 +74,6 @@
 		04FD679B288541D700634487 /* SwiftApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		04FD67A12885438000634487 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		04FD67A3288544B700634487 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
-		04FD67A52885454D00634487 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
-		04FD67A9288553FD00634487 /* FLYKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FLYKit.framework; sourceTree = "<group>"; };
 		179BB9ECAD1ED26F99FC1AE1 /* Pods-SwiftApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftApp.release.xcconfig"; path = "Target Support Files/Pods-SwiftApp/Pods-SwiftApp.release.xcconfig"; sourceTree = "<group>"; };
 		61FB6959C8582BE0708573F1 /* Pods-SwiftApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftApp.debug.xcconfig"; path = "Target Support Files/Pods-SwiftApp/Pods-SwiftApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E3794CBC503273A22E783C58 /* Pods_SwiftApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,7 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3970215AB7D02FB6F2EA63F /* Pods_SwiftApp.framework in Frameworks */,
-				04FD67AA288553FD00634487 /* FLYKit.framework in Frameworks */,
+				0494B7B728E1B394004AA82B /* FLYKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +139,7 @@
 		044F53E228801DF900948767 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				04FD67A9288553FD00634487 /* FLYKit.framework */,
+				0494B7B628E1B394004AA82B /* FLYKit.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -164,7 +165,6 @@
 		044F53E528801E0100948767 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
-				04FD67A52885454D00634487 /* Common.swift */,
 				04FABB852887E87200A363F5 /* Constant.swift */,
 				04F94A152887D6EC002E2197 /* APIConfig.swift */,
 				04FD679B288541D700634487 /* SwiftApp-Bridging-Header.h */,
@@ -183,8 +183,6 @@
 		044F53E728801E0700948767 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				04F94A092886BA9F002E2197 /* UICollectionView */,
-				04F94A062886BA9F002E2197 /* UITableView */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -278,7 +276,6 @@
 		044F53F1288022F700948767 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				04F949DB28868887002E2197 /* ExceptionView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -349,7 +346,6 @@
 			isa = PBXGroup;
 			children = (
 				04A6BA6A288E6C64009D95A3 /* Cell.swift */,
-				04A6BA69288E6C64009D95A3 /* WaterFlowLayout.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -382,33 +378,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		04F949DB28868887002E2197 /* ExceptionView */ = {
-			isa = PBXGroup;
-			children = (
-				042B0708288E9B8600386D51 /* FLYDataStatusProtocal.h */,
-				04F949DE28868DB3002E2197 /* ExceptionView.swift */,
-			);
-			path = ExceptionView;
-			sourceTree = "<group>";
-		};
-		04F94A062886BA9F002E2197 /* UITableView */ = {
-			isa = PBXGroup;
-			children = (
-				04F94A082886BA9F002E2197 /* UITableView+FLYRefresh.h */,
-				04F94A072886BA9F002E2197 /* UITableView+FLYRefresh.m */,
-			);
-			path = UITableView;
-			sourceTree = "<group>";
-		};
-		04F94A092886BA9F002E2197 /* UICollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				04F94A0A2886BA9F002E2197 /* UICollectionView+FLYRefresh.h */,
-				04F94A0B2886BA9F002E2197 /* UICollectionView+FLYRefresh.m */,
-			);
-			path = UICollectionView;
 			sourceTree = "<group>";
 		};
 		04F94A0E2887CACA002E2197 /* FLYUser */ = {
@@ -451,6 +420,7 @@
 				044F53C728801CD800948767 /* Frameworks */,
 				044F53C828801CD800948767 /* Resources */,
 				1465A2925A0F8CF4DB989E5A /* [CP] Embed Pods Frameworks */,
+				0494B7B828E1B61D004AA82B /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -559,9 +529,7 @@
 				04FD67A22885438000634487 /* BaseViewController.swift in Sources */,
 				04F31E8A288652D2007BC8F0 /* TabBarController.swift in Sources */,
 				04F94A162887D6EC002E2197 /* APIConfig.swift in Sources */,
-				04A6BA6B288E6C65009D95A3 /* WaterFlowLayout.swift in Sources */,
 				04FD67A4288544B700634487 /* NavigationController.swift in Sources */,
-				04F94A0D2886BA9F002E2197 /* UICollectionView+FLYRefresh.m in Sources */,
 				04F31E902886815D007BC8F0 /* MessageViewController.swift in Sources */,
 				044F54002881042800948767 /* KeyValueModel.swift in Sources */,
 				04F31E9228868167007BC8F0 /* MyViewController.swift in Sources */,
@@ -571,13 +539,10 @@
 				04F31E8E2886814E007BC8F0 /* HomeViewController.swift in Sources */,
 				04A6BA6E288E6C88009D95A3 /* Model.swift in Sources */,
 				04FABB862887E87200A363F5 /* Constant.swift in Sources */,
-				04F949DF28868DB4002E2197 /* ExceptionView.swift in Sources */,
 				044F54022881579500948767 /* BaseModel.swift in Sources */,
-				04F94A0C2886BA9F002E2197 /* UITableView+FLYRefresh.m in Sources */,
 				044F53CE28801CD800948767 /* AppDelegate.swift in Sources */,
 				04A6BA65288E3238009D95A3 /* NetWorkTool.swift in Sources */,
 				04F94A142887CACA002E2197 /* FLYUser.m in Sources */,
-				04FD67A62885454D00634487 /* Common.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -729,9 +694,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -790,9 +754,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

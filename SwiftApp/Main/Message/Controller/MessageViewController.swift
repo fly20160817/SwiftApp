@@ -32,10 +32,11 @@ class MessageViewController: BaseViewController {
 
     private lazy var collectionView: UICollectionView = {
       
-        let layout = WaterFlowLayout()
+        let layout = FLYWaterFlowLayout()
         layout.delegate = self
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = view.backgroundColor
         collectionView.dataSource = self
         collectionView.register(Cell.self, forCellWithReuseIdentifier: collectionView.cellReuseIdentifier)
         collectionView.addRefreshingTarget(self, action: #selector(getListNetwork))
@@ -196,9 +197,9 @@ extension MessageViewController: UICollectionViewDataSource
     }
 }
 
-extension MessageViewController: WaterFlowLayoutDelegate
+extension MessageViewController: FLYWaterFlowLayoutDelegate
 {
-    func waterFlowLayout(_ layout: WaterFlowLayout, heightForItemAt indexPath: IndexPath, itemWidth width: CGFloat) -> CGFloat
+    func waterFlowLayout(_ layout: FLYWaterFlowLayout, heightForItemAt indexPath: IndexPath, itemWidth width: CGFloat) -> CGFloat
     {
         let model: Model = collectionView.dataList[indexPath.item] as! Model
         
