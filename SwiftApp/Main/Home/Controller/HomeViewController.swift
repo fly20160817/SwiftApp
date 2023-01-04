@@ -16,7 +16,7 @@ class HomeViewController: BaseViewController {
         
         showNavLine = false
         
-  
+
     }
     
 

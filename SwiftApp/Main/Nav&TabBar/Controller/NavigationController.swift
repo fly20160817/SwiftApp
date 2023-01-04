@@ -38,6 +38,99 @@ class NavigationController: UINavigationController {
     }
     
     
+    /// bar的默认背景颜色
+    public var defaultBarColor: UIColor = colorHex("#FFFFFF")
+    
+    /// 默认标题颜色
+    public var defaultTitleColor: UIColor = colorHex("#333333")
+    
+    /// 默认标题字体
+    public var defaultTitleFont: UIFont = FONT_M(16)
+    
+    /// 默认返回箭头的图片名字
+    public var defaultArrowImageName: String = "icon_return"
+    
+    
+    
+    /** 提供几个样式属性，如果哪个页面设计的不一样，可以单独设置 **/
+    
+    /// bar的背景颜色
+    public var barColor: UIColor? {
+        didSet{
+            
+            if #available(iOS 13.0, *)
+            {
+                navigationBar.scrollEdgeAppearance?.backgroundColor = barColor
+                navigationBar.standardAppearance.backgroundColor = barColor
+            }
+            else
+            {
+                navigationBar.barTintColor = barColor
+            }
+        }
+    }
+    
+    /// 标题颜色
+    public var titleColor: UIColor? {
+        
+        didSet{
+            
+            if #available(iOS 13.0, *)
+            {
+                var barAppearance = navigationBar.standardAppearance
+                
+                var dic = barAppearance.titleTextAttributes
+                dic[NSAttributedString.Key.foregroundColor] = titleColor
+                barAppearance.titleTextAttributes = dic
+                
+                navigationBar.scrollEdgeAppearance = barAppearance
+                navigationBar.standardAppearance = barAppearance
+            }
+            else
+            {
+                var dic = navigationBar.titleTextAttributes
+                dic?[NSAttributedString.Key.foregroundColor] = titleColor
+                navigationBar.titleTextAttributes = dic
+            }
+        }
+    }
+    
+    /// 标题字体
+    public var titleFont: UIFont? {
+        
+        didSet{
+            
+            if #available(iOS 13.0, *)
+            {
+                var barAppearance = navigationBar.standardAppearance
+                
+                var dic = barAppearance.titleTextAttributes
+                dic[NSAttributedString.Key.font] = titleFont
+                barAppearance.titleTextAttributes = dic
+                
+                navigationBar.scrollEdgeAppearance = barAppearance
+                navigationBar.standardAppearance = barAppearance
+            }
+            else
+            {
+                var dic = navigationBar.titleTextAttributes
+                dic?[NSAttributedString.Key.font] = titleFont
+                navigationBar.titleTextAttributes = dic
+            }
+            
+        }
+    }
+    
+    /// 返回箭头的图片名字
+    public var arrowImageName: String? {
+        
+        didSet{
+            
+            viewControllers.last?.navigationItem.leftBarButtonItem = UIBarButtonItem.init(imageName: arrowImageName!, target: self, action: #selector(backAction))
+        }
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +146,7 @@ class NavigationController: UINavigationController {
         if viewControllers.count > 0
         {
             //自定义返回按钮
-            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem.init(imageName: "icon_return", target: self, action: #selector(backAction))
+            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem.init(imageName: defaultArrowImageName, target: self, action: #selector(backAction))
             
             //隐藏底部tabBer
             viewController.hidesBottomBarWhenPushed = true
@@ -82,12 +175,12 @@ private extension NavigationController
         {
             let barAppearance = UINavigationBarAppearance()
             //bar的背景颜色
-            barAppearance.backgroundColor = UIColor.white
+            barAppearance.backgroundColor = defaultBarColor
             //底下线的颜色
             barAppearance.shadowColor = UIColor.clear
 
             //设置导航条标题的字体、颜色
-            let dic = [ NSAttributedString.Key.font : FONT_M(16), NSAttributedString.Key.foregroundColor : colorHex("#333333") ]
+            let dic = [ NSAttributedString.Key.font : defaultTitleFont, NSAttributedString.Key.foregroundColor : defaultTitleColor ]
             barAppearance.titleTextAttributes = dic
 
             navigationBar.scrollEdgeAppearance = barAppearance
@@ -96,13 +189,13 @@ private extension NavigationController
         else
         {
             //bar的背景颜色
-            navigationBar.barTintColor = colorHex("FFFFFF")
+            navigationBar.barTintColor = defaultBarColor
 
             //底下线的颜色
             navigationBar.shadowImage = UIImage.init(color: UIColor.clear, size: CGSize(width: SCREEN_WIDTH, height: 1))
 
             //设置导航条标题的字体、颜色
-            let dic = [ NSAttributedString.Key.font : FONT_M(16), NSAttributedString.Key.foregroundColor : colorHex("#333333") ]
+            let dic = [ NSAttributedString.Key.font : defaultTitleFont, NSAttributedString.Key.foregroundColor : defaultTitleColor ]
             navigationBar.titleTextAttributes = dic
         }
     }
